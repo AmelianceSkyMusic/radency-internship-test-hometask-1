@@ -15,7 +15,7 @@ export function createHeader(data) {
 		if (data.activeTab === 'archived') store.updateValue('activeTab', 'notes');
 	});
 
-	const archivedTab$ = createHTMLElem(initBlock$, 'button', { class: join('header__tab header__archived-tab', archivedClasses) }, 'Archived Notes');
+	const archivedTab$ = createHTMLElem(initBlock$, 'button', { class: join('header__tab header__archived-tab', archivedClasses) }, 'Archive');
 	archivedTab$.addEventListener('click', () => {
 		if (data.activeTab === 'notes') store.updateValue('activeTab', 'archived');
 	});
