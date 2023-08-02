@@ -1,16 +1,21 @@
 import { appendInitBlock } from '../../helpers/appendInitBlock.js';
-import { createAddNote } from './elements/createAddNote.js';
+import { createAddNote } from './elements/noteItem/createAddNote.js';
+import { createArchivedNoteHeadingItemButtons } from './elements/headingItem/createArchivedNoteHeadingItemButtons.js';
+import { createHeadingItem } from './elements/headingItem/createHeadingItem.js';
+import { createHeadingItemButtons } from './elements/headingItem/createHeadingItemButtons.js';
 import { createInitBlockHTMLElem } from '../../helpers/createInitBlockHTMLElem.js';
-import { createNoteHeading } from './elements/createNoteHeading.js';
 import { createNoteItemsList } from './noteItemsList/createNoteItemsList.js';
 
-export function createNoteTable(list, activeTab) {
+export function createNoteTable(data) {
+	const noteList = data.activeTab === 'notes' ? data.notesList : data.archivedNotesList;
+
 	const [initBlock$, existsBlock$] = createInitBlockHTMLElem('section', { id: 'note-table', class: 'note-table' });
 
-	createNoteHeading(initBlock$, 'Created', 'Category', 'Content', 'Dates');
+	const buttonCreateCallback = data.activeTab === 'notes' ? createHeadingItemButtons : createArchivedNoteHeadingItemButtons;
+	createHeadingItem(initBlock$, buttonCreateCallback, 'Created', 'Category', 'Content', 'Dates');
 
-	createNoteItemsList(initBlock$, list, activeTab);
-	if (activeTab === 'notes') createAddNote(initBlock$);
+	createNoteItemsList(initBlock$, noteList, data);
+	if (data.activeTab === 'notes') createAddNote(initBlock$);
 
 	appendInitBlock('main', initBlock$, existsBlock$);
 }
