@@ -1,4 +1,4 @@
-import { createHTMLElem } from '../../../helpers/createHTMLElem.js';
+import { createHTMLElem } from '../../../../helpers/createHTMLElem.js';
 
 export function createAddNote(parent$) {
 	const addNote$ = createHTMLElem(parent$, 'div', { class: 'add-note' });

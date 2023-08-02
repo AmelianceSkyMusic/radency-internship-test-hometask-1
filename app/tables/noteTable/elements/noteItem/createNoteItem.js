@@ -1,6 +1,6 @@
-import { createHTMLElem } from '../../../helpers/createHTMLElem.js';
+import { createHTMLElem } from '../../../../helpers/createHTMLElem.js';
 
-export function createNoteItem(parent$, createNoteItemButtons, note) {
+export function createNoteItem(parent$, createNoteItemButtons, note, data) {
 	const noteItem$ = createHTMLElem(parent$, 'div', { class: 'note-item' });
 
 	createHTMLElem(noteItem$, 'p', { class: 'note-item__created' }, note.created);

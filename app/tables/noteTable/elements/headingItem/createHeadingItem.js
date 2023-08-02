@@ -1,6 +1,6 @@
-import { createHTMLElem } from '../../../helpers/createHTMLElem.js';
+import { createHTMLElem } from '../../../../helpers/createHTMLElem.js';
 
-export function createNoteHeading(parent$, createdTitle, categoryTitle, contentTitle, datesTitle) {
+export function createHeadingItem(parent$, createButtons, createdTitle, categoryTitle, contentTitle, datesTitle) {
 	const noteHeading$ = createHTMLElem(parent$, 'div', { class: 'note-heading' });
 
 	createHTMLElem(noteHeading$, 'h5', { class: 'note-heading__created' }, createdTitle);
@@ -9,14 +9,7 @@ export function createNoteHeading(parent$, createdTitle, categoryTitle, contentT
 	createHTMLElem(noteHeading$, 'h5', { class: 'note-heading__dates' }, datesTitle);
 
 	const noteHeadingButtons$ = createHTMLElem(noteHeading$, 'div', { class: 'note-heading__buttons note-heading-buttons' });
-
-	const toArchive$ = createHTMLElem(noteHeadingButtons$, 'button', { class: 'note-heading-buttons__to-archive note-heading-button' }, '📥');
-	toArchive$.addEventListener('click', () => {
-	});
-
-	const delete$ = createHTMLElem(noteHeadingButtons$, 'button', { class: 'note-heading-buttons__delete note-heading-button' }, '🗑️');
-	delete$.addEventListener('click', () => {
-	});
+	createButtons(noteHeadingButtons$);
 
 	return parent$;
 }
