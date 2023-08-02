@@ -1,0 +1,14 @@
+:root {
+	--color--0: white;
+	--color--1: black;
+
+	--color--10: rgb(240 240 240);
+	--color--20: rgb(215 215 215);
+	--color--30: rgb(190 190 190);
+	--color--40: rgb(155 155 155);
+	--color--50: rgb(130 130 130);
+	--color--60: rgb(105 105 105);
+	--color--70: rgb(80 80 80);
+	--color--80: rgb(55 55 55);
+	--color--90: rgb(20 20 20);
+}
