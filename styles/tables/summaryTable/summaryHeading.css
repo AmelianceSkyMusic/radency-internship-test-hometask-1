@@ -1,8 +1,7 @@
 .summary-heading {
 	display: flex;
 	justify-content: space-between;
-	border-bottom: 1px var(--color--50) solid;
-	padding: 8px;
+	padding: 8px 54px;
 	align-items: center;
 	background-color: var(--color--20);
 }

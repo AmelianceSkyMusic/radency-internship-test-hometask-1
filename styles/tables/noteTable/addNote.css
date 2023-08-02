@@ -1,8 +1,7 @@
 .add-note {
 	display: flex;
 	justify-content: end;
-	border-bottom: 1px var(--color--50) dotted;
-	padding: 8px;
+	padding: 8px 64px;
 	align-items: center;
 }
 
