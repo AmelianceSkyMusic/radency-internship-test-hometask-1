@@ -1,0 +1,31 @@
+.header {
+	height: 36px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header__tab {
+	color: var(--color--20);
+	background-color: var(--color--60);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	height: 100%;
+	cursor: pointer;
+}
+
+.header__tab:hover {
+	background-color: var(--color--70);
+}
+
+.header__tab_active {
+	cursor: default;
+	color: var(--color--0);
+	background-color: var(--color--50);
+}
+
+.header__tab_active:hover {
+	background-color: var(--color--50);
+}
