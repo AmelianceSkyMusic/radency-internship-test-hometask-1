@@ -1,0 +1,48 @@
+.note-item {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px var(--color--50) dotted;
+	padding: 8px;
+	align-items: center;
+}
+
+.note-item:hover {
+	background-color: var(--color--10);
+}
+
+.note-item__created {
+	flex: 1;
+}
+
+.note-item__category {
+	flex: 2;
+	filter: grayscale(1);
+}
+
+.note-item__content {
+	flex: 3;
+}
+
+.note-item__dates {
+	flex: 2;
+}
+
+.note-item__buttons {
+	display: flex;
+	justify-content: end;
+	column-gap: 2px;
+	min-width: 112px;
+}
+
+.note-item-button {
+	width: 36px;
+	height: 36px;
+	filter: grayscale(1);
+	border: none;
+	background-color: var(--color--20);
+}
+
+.note-item-button:hover {
+	cursor: pointer;
+	background-color: var(--color--0);
+}

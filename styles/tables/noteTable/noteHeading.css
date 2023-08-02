@@ -1,0 +1,52 @@
+.note-heading {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px var(--color--50) solid;
+	padding: 8px;
+	align-items: center;
+	position: sticky;
+	background-color: var(--color--20);
+	top: 0;
+	z-index: 1;
+}
+
+.note-heading__created {
+	flex: 1;
+}
+
+.note-heading__category {
+	flex: 2;
+}
+
+.note-heading__content {
+	flex: 3;
+}
+
+.note-heading__dates {
+	flex: 2;
+}
+
+.note-heading__buttons {
+	display: flex;
+	justify-content: end;
+	column-gap: 2px;
+	min-width: 112px;
+}
+
+.note-heading-button {
+	width: 36px;
+	height: 36px;
+	filter: grayscale(1);
+	border: none;
+	background: none;
+	background-color: var(--color--10);
+}
+
+.note-heading-button:hover {
+	cursor: pointer;
+	background-color: var(--color--0);
+}
+
+.note-heading-buttons__edit {
+	visibility: hidden;
+}

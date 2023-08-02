@@ -1,0 +1,23 @@
+.add-note {
+	display: flex;
+	justify-content: end;
+	border-bottom: 1px var(--color--50) dotted;
+	padding: 8px;
+	align-items: center;
+}
+
+.add-note__button {
+	display: flex;
+	align-self: end;
+	height: 36px;
+	width: 112px;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color--20);
+	filter: grayscale(1);
+}
+
+.add-note__button:hover {
+	cursor: pointer;
+	background-color: var(--color--30);
+}
