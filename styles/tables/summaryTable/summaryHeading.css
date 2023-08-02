@@ -1,0 +1,20 @@
+.summary-heading {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px var(--color--50) solid;
+	padding: 8px;
+	align-items: center;
+	background-color: var(--color--20);
+}
+
+.summary-heading__category {
+	flex: 3;
+}
+
+.summary-heading__active {
+	flex: 1;
+}
+
+.summary-heading__archived {
+	flex: 1;
+}

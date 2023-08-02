@@ -1,0 +1,24 @@
+.summary-item {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px var(--color--50) dotted;
+	padding: 8px;
+	align-items: center;
+}
+
+.summary-item:hover {
+	background-color: var(--color--10);
+}
+
+.summary-item__category {
+	flex: 3;
+	filter: grayscale(1);
+}
+
+.summary-item__active {
+	flex: 1;
+}
+
+.summary-item__archived {
+	flex: 1;
+}
