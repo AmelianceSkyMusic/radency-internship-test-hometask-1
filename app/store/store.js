@@ -1,152 +1,11 @@
+import { getCurrentDateInMs } from '../helpers/getCurrentDateInMs.js';
+import { initArchivedNotesList } from './initData/initArchivedNotesList.js';
+import { initNotesList } from './initData/initNotesList.js';
 import { observable } from './observable.js';
 
-const notesList = [
-	{
-		id: 1,
-		created: '',
-		category: '✅ Task',
-		content: 'content',
-		dates: '',
-		isArchived: false,
-	},
-	{
-		id: 2,
-		name: 'Random Thought',
-		created: '',
-		category: '💭 Random Thought',
-		content: 'content',
-		dates: '',
-		isArchived: false,
-	},
-	{
-		id: 3,
-		created: '',
-		category: '💡 Idea',
-		content: 'content',
-		dates: '',
-		isArchived: false,
-	},
-	{
-		id: 4,
-		created: '',
-		category: '✅ Task',
-		content: 'content',
-		dates: '',
-		isArchived: false,
-	},
-	{
-		id: 5,
-		created: '',
-		category: '💡 Idea',
-		content: 'content',
-		dates: '',
-		isArchived: false,
-	},
-	{
-		id: 6,
-		created: '',
-		category: '✅ Task',
-		content: 'content',
-		dates: '',
-		isArchived: false,
-	},
-	{
-		id: 7,
-		created: '',
-		category: '✅ Task',
-		content: 'content',
-		dates: '',
-		isArchived: false,
-	},
-	{
-		id: 1,
-		created: '',
-		category: '✅ Task',
-		content: 'content',
-		dates: '',
-		isArchived: false,
-	},
-	{
-		id: 2,
-		name: 'Random Thought',
-		created: '',
-		category: '💭 Random Thought',
-		content: 'content',
-		dates: '',
-		isArchived: false,
-	},
-	{
-		id: 3,
-		created: '',
-		category: '💡 Idea',
-		content: 'content',
-		dates: '',
-		isArchived: false,
-	},
-	{
-		id: 4,
-		created: '',
-		category: '✅ Task',
-		content: 'content',
-		dates: '',
-		isArchived: false,
-	},
-	{
-		id: 5,
-		created: '',
-		category: '💡 Idea',
-		content: 'content',
-		dates: '',
-		isArchived: false,
-	},
-	{
-		id: 6,
-		created: '',
-		category: '✅ Task',
-		content: 'content',
-		dates: '',
-		isArchived: false,
-	},
-	{
-		id: 7,
-		created: '',
-		category: '✅ Task',
-		content: 'content',
-		dates: '',
-		isArchived: false,
-	},
-];
-
-const archivedNotesList = [
-	{
-		id: 8,
-		created: '',
-		category: '✅ Task',
-		content: 'vxcvb',
-		dates: '',
-		isArchived: false,
-	},
-	{
-		id: 9,
-		created: '',
-		category: '✅ Task',
-		content: 'xcvbxvbxcvb',
-		dates: '',
-		isArchived: false,
-	},
-	{
-		id: 10,
-		created: '',
-		category: '💡 Idea',
-		content: 'content',
-		dates: '',
-		isArchived: false,
-	},
-];
-
 export const store = observable({
-	notesList,
-	archivedNotesList,
+	notesList: initNotesList,
+	archivedNotesList: initArchivedNotesList,
 	activeTab: 'notes',
 
 	moveNoteToArchive: (id) => {
@@ -162,7 +21,7 @@ export const store = observable({
 		store.update({ ...store.data, notesList: newNotesList });
 	},
 	moveAllNoteToArchive: () => {
-		store.update({ ...store.data, notesList: [], archivedNotesList: [...archivedNotesList, ...notesList] });
+		store.update({ ...store.data, notesList: [], archivedNotesList: [...store.data.archivedNotesList, ...store.data.notesList] });
 	},
 	removeAllNotesList: () => {
 		store.update({ ...store.data, notesList: [] });
@@ -181,7 +40,7 @@ export const store = observable({
 		store.update({ ...store.data, archivedNotesList: newArchivedNotesList });
 	},
 	moveAllNoteFromArchive: () => {
-		store.update({ ...store.data, notesList: [...notesList, ...archivedNotesList], archivedNotesList: [] });
+		store.update({ ...store.data, notesList: [...store.data.notesList, ...store.data.archivedNotesList], archivedNotesList: [] });
 	},
 	removeAllArchivedNotesList: () => {
 		store.update({ ...store.data, archivedNotesList: [] });
