@@ -1,45 +1,57 @@
 .note-item {
 	display: flex;
 	justify-content: space-between;
-	border-bottom: 1px var(--color--50) dotted;
-	padding: 8px 64px;
 	align-items: center;
+	padding: 8px 64px;
+	border-bottom: 1px var(--color--50) dotted;
 }
 
 .note-item:hover {
 	background-color: var(--color--10);
 }
 
-.note-item__created {
-	flex: 1;
+.note-item-cell {
+	padding: 4px;
 }
 
-.note-item__category {
-	flex: 2;
+.note-item__icon {
+	flex: 1;
 	filter: grayscale(1);
 }
 
-.note-item__content {
+.note-item__name {
+	flex: 2;
+}
+
+.note-item__created {
 	flex: 3;
 }
 
+.note-item__category {
+	flex: 3;
+}
+
+.note-item__content {
+	flex: 6;
+}
+
 .note-item__dates {
-	flex: 2;
+	flex: 3;
 }
 
 .note-item__buttons {
 	display: flex;
 	justify-content: end;
-	column-gap: 2px;
 	min-width: 112px;
+	column-gap: 2px;
 }
 
 .note-item-button {
 	width: 36px;
 	height: 36px;
-	filter: grayscale(1);
 	border: none;
 	background-color: var(--color--20);
+	filter: grayscale(1);
 }
 
 .note-item-button:hover {
