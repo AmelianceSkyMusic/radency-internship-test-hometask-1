@@ -4,6 +4,6 @@ export function appendInitBlock(parentId, initBlock$, existsBlock$) {
 		existsBlock$.append(initBlock$);
 	} else {
 		const root$ = document.getElementById(parentId);
-		root$.append(initBlock$);
+		root$?.append(initBlock$);
 	}
 }

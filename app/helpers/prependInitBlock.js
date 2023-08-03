@@ -4,6 +4,6 @@ export function prependInitBlock(parentId, initBlock$, existsBlock$) {
 		existsBlock$.prepend(initBlock$);
 	} else {
 		const root$ = document.getElementById(parentId);
-		root$.prepend(initBlock$);
+		root$?.prepend(initBlock$);
 	}
 }
