@@ -1,0 +1,63 @@
+.note-heading {
+	display: flex;
+	z-index: 1;
+	position: sticky;
+	top: 0;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 64px;
+	background-color: var(--color--20);
+}
+
+.note-heading-cell {
+	padding: 4px;
+}
+
+.note-heading__icon {
+	flex: 1;
+}
+
+.note-heading__name {
+	flex: 2;
+}
+
+.note-heading__created {
+	flex: 3;
+}
+
+.note-heading__category {
+	flex: 3;
+}
+
+.note-heading__content {
+	flex: 6;
+}
+
+.note-heading__dates {
+	flex: 3;
+}
+
+.note-heading__buttons {
+	display: flex;
+	justify-content: end;
+	min-width: 112px;
+	column-gap: 2px;
+}
+
+.note-heading-button {
+	width: 36px;
+	height: 36px;
+	border: none;
+	background: none;
+	background-color: var(--color--10);
+	filter: grayscale(1);
+}
+
+.note-heading-button:hover {
+	cursor: pointer;
+	background-color: var(--color--0);
+}
+
+.note-heading-buttons__edit {
+	visibility: hidden;
+}
