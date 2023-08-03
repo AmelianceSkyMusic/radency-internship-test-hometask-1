@@ -1,22 +1,12 @@
+import { CATEGORIES } from '../../../constants/CATEGORIES.js';
+
 export function getCategoriesFromData(data) {
 	const categories = {};
 
-	data?.notesList?.forEach((note) => {
-		if (!categories[note.category]) categories[note.category] = {};
-		if (categories[note.category]?.active) {
-			categories[note.category].active = categories[note.category].active + 1;
-		} else {
-			categories[note.category].active = 1;
-		}
-	});
-
-	data?.archivedNotesList?.forEach((note) => {
-		if (!categories[note.category]) categories[note.category] = {};
-		if (categories[note.category]?.archived) {
-			categories[note.category].archived = categories[note.category].archived + 1;
-		} else {
-			categories[note.category].archived = 1;
-		}
+	Object.keys(CATEGORIES).forEach((category) => {
+		if (!categories[category]) categories[category] = {};
+		categories[category].active = data.notesList.filter((note) => note.category === category).length;
+		categories[category].archived = data.archivedNotesList.filter((note) => note.category === category).length;
 	});
 
 	return categories;
