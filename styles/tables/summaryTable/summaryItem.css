@@ -1,24 +1,32 @@
 .summary-item {
 	display: flex;
 	justify-content: space-between;
-	border-bottom: 1px var(--color--50) dotted;
-	padding: 8px 64px;
 	align-items: center;
+	padding: 8px 64px;
+	border-bottom: 1px var(--color--50) dotted;
 }
 
 .summary-item:hover {
 	background-color: var(--color--10);
 }
 
-.summary-item__category {
-	flex: 3;
+.summary-item-cell {
+	padding: 4px;
+}
+
+.summary-item__icon {
+	flex: 1;
 	filter: grayscale(1);
 }
 
+.summary-item__category {
+	flex: 6;
+}
+
 .summary-item__active {
-	flex: 1;
+	flex: 2;
 }
 
 .summary-item__archived {
-	flex: 1;
+	flex: 2;
 }

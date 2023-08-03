@@ -1,19 +1,27 @@
 .summary-heading {
 	display: flex;
 	justify-content: space-between;
-	padding: 8px 54px;
 	align-items: center;
+	padding: 8px 64px;
 	background-color: var(--color--20);
 }
 
+.summary-heading-cell {
+	padding: 4px;
+}
+
+.summary-heading__icon {
+	flex: 1;
+}
+
 .summary-heading__category {
-	flex: 3;
+	flex: 6;
 }
 
 .summary-heading__active {
-	flex: 1;
+	flex: 2;
 }
 
 .summary-heading__archived {
-	flex: 1;
+	flex: 2;
 }
