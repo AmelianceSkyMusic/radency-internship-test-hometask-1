@@ -1,19 +1,19 @@
 .header {
-	height: 36px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	height: 36px;
 }
 
 .header__tab {
-	color: var(--color--20);
-	background-color: var(--color--60);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 50%;
 	height: 100%;
+	color: var(--color--20);
 	cursor: pointer;
+	background-color: var(--color--60);
 }
 
 .header__tab:hover {
@@ -21,8 +21,8 @@
 }
 
 .header__tab_active {
-	cursor: default;
 	color: var(--color--0);
+	cursor: default;
 	background-color: var(--color--50);
 }
 
