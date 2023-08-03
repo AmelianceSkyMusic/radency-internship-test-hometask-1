@@ -17,7 +17,7 @@ export const initNotesList = [
 		id: 1690237959446,
 		name: 'Obsidian',
 		created: 1690237959446,
-		category: 'idea',
+		category: 'quote',
 		content: "Obsidian's versatile and interconnected notes",
 	},
 	{

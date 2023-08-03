@@ -1,5 +1,6 @@
 export const CATEGORY_ICON = {
-	task: '✅',
 	idea: '💡',
+	quote: '📝',
+	task: '✅',
 	thought: '💭',
 };

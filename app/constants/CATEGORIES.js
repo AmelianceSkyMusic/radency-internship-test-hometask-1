@@ -1,5 +1,6 @@
 export const CATEGORIES = {
-	task: 'Task',
 	idea: 'Idea',
+	quote: 'Quote',
+	task: 'Task',
 	thought: 'Random Thought',
 };
