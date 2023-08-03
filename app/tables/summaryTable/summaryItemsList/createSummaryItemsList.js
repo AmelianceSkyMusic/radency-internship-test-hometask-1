@@ -2,7 +2,7 @@ import { CATEGORIES } from '../../../constants/CATEGORIES.js';
 import { CATEGORY_ICON } from '../../../constants/CATEGORY_ICON.js';
 import { createHTMLElem } from '../../../helpers/createHTMLElem.js';
 import { createSummaryItem } from '../elements/createSummaryItem.js';
-import { getCategoriesFromData } from './getCategoriesFromData.js';
+import { getCategoriesFromData } from './helpers/getCategoriesFromData.js';
 
 export function createSummaryItemsList(parent$, data) {
 	const summaryList$ = createHTMLElem(parent$, 'div', { class: 'summary-items-list' });

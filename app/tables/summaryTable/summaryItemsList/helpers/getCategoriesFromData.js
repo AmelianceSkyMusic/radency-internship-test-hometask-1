@@ -1,4 +1,4 @@
-import { CATEGORIES } from '../../../constants/CATEGORIES.js';
+import { CATEGORIES } from '../../../../constants/CATEGORIES.js';
 
 export function getCategoriesFromData(data) {
 	const categories = {};
