@@ -45,4 +45,23 @@ export const store = observable({
 	removeAllArchivedNotesList: () => {
 		store.update({ ...store.data, archivedNotesList: [] });
 	},
+
+	addNote: (name, category, content) => {
+		const currentDateInMs = getCurrentDateInMs();
+		const id = currentDateInMs;
+		const created = currentDateInMs;
+		const newNote = { id, created, name, category, content };
+		const newNotesList = [...store.data.notesList, newNote];
+		store.update({ ...store.data, notesList: newNotesList });
+	},
+
+	editNote: (id, name, category, content) => {
+		let currentNote = {};
+		const filteredNotesList = store.data.notesList.filter((note) => {
+			if (note.id !== id) return true;
+			currentNote = { ...note };
+		});
+		const newNotesList = [...filteredNotesList, { ...currentNote, name, category, content }];
+		store.update({ ...store.data, notesList: newNotesList });
+	},
 });
