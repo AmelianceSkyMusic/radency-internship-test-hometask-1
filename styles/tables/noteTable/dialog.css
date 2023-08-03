@@ -1,0 +1,80 @@
+.dialog-container {
+	display: flex;
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.4);
+	animation: show 0.2s ease-out;
+}
+
+@keyframes show {
+	0% {
+		opacity: 0;
+	}
+}
+
+.dialog {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	max-height: 90%;
+	margin: auto;
+	padding: 32px;
+	row-gap: 16px;
+}
+
+.dialog-form {
+	display: flex;
+	flex-direction: column;
+	row-gap: 12px;
+}
+
+.dialog-form-label {
+	font-size: 12px;
+}
+
+.dialog-form-input {
+	width: 100%;
+	height: 32px;
+	margin-bottom: 12px;
+	padding: 8px;
+	background-color: var(--color--10);
+}
+
+.dialog-form__category {
+	filter: grayscale(1);
+}
+
+.dialog-form__content {
+	height: 128px;
+	font-family: system-ui;
+	resize: vertical;
+}
+
+.dialog-form-buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	column-gap: 8px;
+}
+
+.dialog-form-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 8px 8px;
+	background-color: var(--color--30);
+	filter: grayscale(1);
+}
+
+.dialog-form-button:hover {
+	cursor: pointer;
+	background-color: var(--color--20);
+}
