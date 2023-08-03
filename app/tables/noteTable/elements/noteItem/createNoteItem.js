@@ -11,7 +11,7 @@ export function createNoteItem(parent$, createNoteItemButtons, id, icon, name, c
 	createHTMLElem(noteItem$, 'p', { class: 'note-item-cell note-item__dates' }, dates);
 
 	const noteItemButtons$ = createHTMLElem(noteItem$, 'div', { class: 'note-item__buttons note-item-buttons' });
-	createNoteItemButtons(noteItemButtons$, note.id);
+	createNoteItemButtons(noteItemButtons$, id, name, category, content);
 
 	return parent$;
 }
