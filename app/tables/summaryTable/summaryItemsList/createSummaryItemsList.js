@@ -1,3 +1,5 @@
+import { CATEGORIES } from '../../../constants/CATEGORIES.js';
+import { CATEGORY_ICON } from '../../../constants/CATEGORY_ICON.js';
 import { createHTMLElem } from '../../../helpers/createHTMLElem.js';
 import { createSummaryItem } from '../elements/createSummaryItem.js';
 import { getCategoriesFromData } from './getCategoriesFromData.js';
@@ -11,7 +13,9 @@ export function createSummaryItemsList(parent$, data) {
 		.sort()
 		.forEach((summaryCategory) => {
 			const { active, archived } = summaryCategory[1];
-			createSummaryItem(summaryList$, summaryCategory[0], active, archived);
+			const icon = CATEGORY_ICON[summaryCategory[0]];
+			const category = CATEGORIES[summaryCategory[0]];
+			createSummaryItem(summaryList$, icon, category, active.toString(), archived.toString());
 		});
 
 	return summaryList$;
